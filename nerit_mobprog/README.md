@@ -3,4 +3,4 @@
 #### INF241 
 
 
-Laboratory 0: Flutter installation
+Laboratory 0: AYOKO NA
