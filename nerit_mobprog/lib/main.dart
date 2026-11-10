@@ -13,6 +13,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold (
         body: Center(
           child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: const [ 
             Text('Hi!! I am using flutter for this.'),
             Text('\n I am Ashley Nicole G. Nerit from INF241')
