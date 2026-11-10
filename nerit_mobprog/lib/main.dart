@@ -13,7 +13,8 @@ class MainApp extends StatelessWidget {
       home: Scaffold (
         body: Center(
           child: 
-            Text('This is my first flutter app! ')
+            Text('Hi!! I am using flutter for this.')
+            Text('I am Ashley Nicole G. Nerit from INF241')
           
           )
         ),
