@@ -119,7 +119,7 @@ class NewsFeedCard extends StatelessWidget {
                     label: CustomFont(
                       text: 'Share',
                       fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
+                      color: FB_DARK_PRIMARY,""
                     ),
                   ),
                 ],
