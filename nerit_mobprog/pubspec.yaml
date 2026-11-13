@@ -17,3 +17,14 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: Klavika
+      fonts:
+        - asset: assets/fonts/KlavikaBoldBold.otf
+    - family: Frutiger
+      fonts:
+        - asset: assets/fonts/FrutigerLTStd-Bold.otf
+  uses-material-design: true

@@ -1,37 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '/screens/home_screen.dart';
+import '/screens/newsfeed_screen.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+void main() => runApp(const NeritFacebook());
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class NeritFacebook extends StatelessWidget {
+  const NeritFacebook({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( // Removed 'const' here
-      home: Scaffold(
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(24.0),
-            decoration: BoxDecoration(
-              color: Colors.blue.shade50,
-              borderRadius: BorderRadius.circular(16.0),
-              border: Border.all(color: Colors.blue.shade200, width: 2),
-            ),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text('ASHLEY NICOLE G. NERIT', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),  ), 
-                SizedBox(height: 10),
-                Text('INF241 | 3rd Year | BSIT-MWA', style: TextStyle(fontSize: 14), ),
-              ],
-            ),
-          ),
-          
-        ),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(412, 715),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      builder: (_, child) {
+        return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          title: 'Facebook Replication',
+          initialRoute: '/home',
+          routes: {
+            '/newsfeed': (context) => const NewsFeedScreen(),
+            '/home': (context) => const HomeScreen(),
+          },
+        );
+      },
     );
   }
 }
