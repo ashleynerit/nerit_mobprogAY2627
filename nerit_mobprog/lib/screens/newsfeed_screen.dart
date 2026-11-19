@@ -1,5 +1,4 @@
 import 'package:material_ui/material_ui.dart';
-
 import '../widgets/newsfeed_card.dart';
 
 class NewsFeedScreen extends StatelessWidget {
@@ -10,17 +9,21 @@ class NewsFeedScreen extends StatelessWidget {
     return ListView(
       children: const [
         NewsFeedCard(
-          userName: 'Eleanore Solana',
-          postContent: 'Hi Baby',
-          numOfLikes: 100,
-          date: 'October 11',
+          userName: 'Ashley Nicole Nerit',
+          profileImage: 'assets/images/ashley.jpg',
+          commentProfileImage: 'assets/images/ashley.jpg',
+          postContent: 'Hi, magandang buhay!',
+          numOfLikes: 1,
+          date: 'November 19',
         ),
         NewsFeedCard(
-          userName: 'Primrose Hygiea',
-          postContent: 'Ulol nio, El',
-          numOfLikes: 200,
+          userName: 'Prince Lomeo Alfanta',
+          profileImage: 'assets/images/lomeo.jpg',
+          commentProfileImage: 'assets/images/lomeo.jpg',
+          postContent: 'misyu bbqng maarte',
+          numOfLikes: 500,
           hasImage: true,
-          date: 'December 2',
+          date: 'October 11',
         ),
       ],
     );
