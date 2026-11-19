@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 const Color FB_PRIMARY = Color(0xFF0167f8);
 const Color FB_SECONDARY = Color(0xFF003bb3);
