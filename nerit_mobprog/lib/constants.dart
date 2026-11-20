@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:material_ui/material_ui.dart';
 
 const Color FB_PRIMARY = Color(0xFF0167f8);

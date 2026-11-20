@@ -1,5 +1,6 @@
-import 'package:material_ui/material_ui.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../constants.dart';
 import 'custom_text.dart';
 
@@ -58,9 +59,7 @@ class NewsFeedCard extends StatelessWidget {
                           fontSize: ScreenUtil().setSp(12),
                           color: Colors.grey,
                         ),
-                        SizedBox(
-                          width: ScreenUtil().setWidth(3),
-                        ),
+                        SizedBox(width: ScreenUtil().setWidth(3)),
                         Icon(
                           Icons.public,
                           color: Colors.grey,
@@ -70,8 +69,8 @@ class NewsFeedCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Spacer(),
-                Icon(Icons.more_horiz),
+                const Spacer(),
+                const Icon(Icons.more_horiz),
               ],
             ),
             SizedBox(height: ScreenUtil().setHeight(5)),
@@ -89,46 +88,45 @@ class NewsFeedCard extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.thumb_up,
-                      color: FB_DARK_PRIMARY,
-                    ),
-                    SizedBox(width: ScreenUtil().setWidth(5)),
-                    CustomText(
-                      text: numOfLikes.toString(),
-                      fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
-                    ),
-                  ],
-                ),
-                Row(
-                  children: [
-                    const Icon(
-                      Icons.comment,
-                      color: FB_DARK_PRIMARY,
-                    ),
-                    SizedBox(width: ScreenUtil().setWidth(5)),
-                    CustomText(
-                      text: 'Comment',
-                      fontSize: ScreenUtil().setSp(12),
-                      color: FB_DARK_PRIMARY,
-                    ),
-                  ],
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite_border,
+                    color: Colors.redAccent,
+                    size: ScreenUtil().setSp(18),
+                  ),
+                  label: CustomText(
+                    text: numOfLikes.toString(),
+                    fontSize: ScreenUtil().setSp(12),
+                    color: Colors.black87,
+                  ),
                 ),
                 TextButton.icon(
                   onPressed: () {},
-                  icon: const Icon(
-                    Icons.redo,
-                    color: FB_DARK_PRIMARY,
+                  icon: Icon(
+                    Icons.chat_bubble_outline,
+                    color: Colors.black87,
+                    size: ScreenUtil().setSp(18),
+                  ),
+                  label: CustomText(
+                    text: 'Comment',
+                    fontSize: ScreenUtil().setSp(12),
+                    color: Colors.black87,
+                  ),
+                ),
+                TextButton.icon(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.share_outlined,
+                    color: Colors.black87,
+                    size: ScreenUtil().setSp(18),
                   ),
                   label: CustomText(
                     text: 'Share',
                     fontSize: ScreenUtil().setSp(12),
-                    color: FB_DARK_PRIMARY,
+                    color: Colors.black87,
                   ),
                 ),
               ],
@@ -139,33 +137,33 @@ class NewsFeedCard extends StatelessWidget {
                   radius: 18,
                   backgroundImage: AssetImage(commentProfileImage),
                 ),
-                SizedBox(
-                  width: ScreenUtil().setWidth(6),
-                ),
-                Container(
-                  padding: EdgeInsets.fromLTRB(
-                    ScreenUtil().setSp(10), 0, 0, 0,
-                  ),
-                  alignment: Alignment.centerLeft,
-                  height: ScreenUtil().setHeight(25),
-                  width: ScreenUtil().setWidth(330),
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(ScreenUtil().setSp(10)),
+                SizedBox(width: ScreenUtil().setWidth(6)),
+                Expanded(
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(
+                      ScreenUtil().setSp(10),
+                      0,
+                      0,
+                      0,
                     ),
-                  ),
-                  child: CustomText(
-                    text: 'Write a comment...',
-                    fontSize: ScreenUtil().setSp(11),
-                    color: Colors.grey,
+                    alignment: Alignment.centerLeft,
+                    height: ScreenUtil().setHeight(25),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.all(
+                        Radius.circular(ScreenUtil().setSp(10)),
+                      ),
+                    ),
+                    child: CustomText(
+                      text: 'Write a comment...',
+                      fontSize: ScreenUtil().setSp(11),
+                      color: Colors.grey,
+                    ),
                   ),
                 ),
               ],
             ),
-            SizedBox(
-              height: ScreenUtil().setHeight(10),
-            ),
+            SizedBox(height: ScreenUtil().setHeight(10)),
             CustomText(
               text: 'View comments',
               fontSize: ScreenUtil().setSp(12),
